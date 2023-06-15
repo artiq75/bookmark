@@ -1,0 +1,17 @@
+.btn {
+  display: inline-block;
+  border: 2px solid transparent;
+  font: inherit;
+  cursor: pointer;
+  padding: 0.5em 2em;
+  border-radius: 7px;
+}
+
+.btn.full {
+  width: 100%;
+}
+
+.btn.outlined {
+  background-color: transparent;
+  border-color: inherit;
+}

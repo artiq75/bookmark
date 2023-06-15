@@ -3,6 +3,8 @@
   --soft-red: hsl(0, 94%, 66%);
   --grayish-blue: hsl(229, 8%, 60%);
   --very-dark-blue: hsl(229, 31%, 21%);
+  --white: white;
+  --container: 1440px;
 }
 
 *,
@@ -17,8 +19,17 @@ html,
 body {
   min-height: 100%;
   width: 100%;
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-size: 18px;
   line-height: 1.5;
+  letter-spacing: 1px;
   color: var(--very-dark-blue);
+}
+
+#root {
+  max-width: var(--container);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1em;
+  padding-right: 1em;
 }

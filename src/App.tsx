@@ -1,9 +1,15 @@
+import Footer from './components/layouts/Footer'
+import Header from './components/layouts/Header'
+import Main from './components/layouts/Main'
+
 function App() {
   return (
-    <main>
-      <h1>Bookmark</h1>
-    </main>
-  );
+    <>
+      <Header />
+      <Main />
+      <Footer />
+    </>
+  )
 }
 
-export default App;
+export default App

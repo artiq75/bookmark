@@ -1,0 +1,132 @@
+.header {
+  padding-top: 3em;
+  padding-bottom: 3em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.75em;
+}
+
+.header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header-nav-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5em;
+}
+
+.header-mobile-logo path:last-child {
+  color: var(--very-dark-blue);
+}
+
+.header-nav-items {
+  list-style-type: none;
+  width: 100%;
+  place-self: center;
+  text-align: center;
+  display: grid;
+}
+
+.header-nav-item {
+  border-top: 1px solid var(--grayish-blue);
+  display: inline-block;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  width: 100%;
+}
+
+.header-hamburger,
+.header-close {
+  all: unset;
+  cursor: pointer;
+  user-select: none;
+}
+
+.header .btn {
+  border-color: var(--white);
+}
+
+.header-social {
+  position: absolute;
+  bottom: 2em;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  list-style-type: none;
+}
+
+@media (max-width: 799px) {
+  .header-top[aria-hidden],
+  .header-nav[aria-hidden] {
+    position: absolute;
+    left: -999999px;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .header {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    color: var(--white);
+    font-size: 1.1rem;
+  }
+
+  .header-top {
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--very-dark-blue);
+    padding: 2em 1.5em;
+    opacity: 0.97;
+    transition: opacity 0.3s;
+  }
+}
+
+@media (min-width: 800px) {
+  .header-mobile-logo,
+  .header-hamburger,
+  .header-close,
+  .header-social {
+    display: none;
+  }
+
+  .header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header-nav-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3em;
+  }
+
+  .header-nav-item {
+    border: none;
+  }
+
+  .header .btn {
+    background-color: var(--soft-red);
+    border-color: var(--soft-red);
+    color: var(--white);
+  }
+}
