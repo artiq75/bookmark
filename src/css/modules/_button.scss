@@ -3,12 +3,18 @@
   border: 2px solid transparent;
   font: inherit;
   cursor: pointer;
-  padding: 0.5em 2em;
-  border-radius: 7px;
+  padding: 0.75em 1em;
+  border-radius: 5px;
 }
 
 .btn.full {
   width: 100%;
+}
+
+.btn.primary {
+  border-color: var(--soft-blue);
+  background-color: var(--soft-blue);
+  color: var(--white);
 }
 
 .btn.outlined {

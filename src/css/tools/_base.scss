@@ -4,7 +4,7 @@
   --grayish-blue: hsl(229, 8%, 60%);
   --very-dark-blue: hsl(229, 31%, 21%);
   --white: white;
-  --container: 1440px;
+  --container: 1240px;
 }
 
 *,
@@ -20,10 +20,11 @@ body {
   min-height: 100%;
   width: 100%;
   font-family: 'Rubik', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.5;
   letter-spacing: 1px;
   color: var(--very-dark-blue);
+  overflow-x: hidden;
 }
 
 #root {
@@ -32,4 +33,10 @@ body {
   margin-right: auto;
   padding-left: 1em;
   padding-right: 1em;
+}
+
+@media (min-width: 1000px) {
+  body {
+    font-size: 18px;
+  }
 }
