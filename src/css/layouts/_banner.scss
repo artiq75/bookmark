@@ -1,6 +1,6 @@
 .banner {
   display: grid;
-  row-gap: 3em;
+  row-gap: 3.75em;
   padding-top: 2em;
   padding-bottom: 2em;
   align-items: center;
@@ -15,7 +15,7 @@
     position: absolute;
     width: 100%;
     background-color: var(--soft-blue);
-    height: 85%;
+    height: 83%;
     transform: translate3d(15%, 25%, 0);
     z-index: -1;
     border-top-left-radius: 200px;
@@ -35,11 +35,13 @@
 
 .banner-title {
   font-weight: 500;
-  margin-bottom: 0.5em;
+  font-size: 2.5vmax;
+  margin-bottom: 1.5vmax;
+  line-height: 1.3;
 }
 
 .banner-text {
-  margin-bottom: 1.5em;
+  margin-bottom: 2vmax;
   color: var(--grayish-blue);
 }
 
@@ -52,16 +54,17 @@
 
 @media (min-width: 1000px) {
   .banner {
-    grid-template-columns: 1fr minmax(min-content, auto);
+    grid-template-columns: minmax(470px, 1fr) 1fr;
     column-gap: 1em;
   }
 
   .banner-img {
     grid-column: none;
+    margin-right: -20.33%;
 
     &::before {
-        width: 200%;
-        transform: translate3d(10%, 25%, 0);
+      width: 200%;
+      transform: translate3d(10%, 25%, 0);
     }
   }
 
@@ -71,15 +74,5 @@
 
   .banner-btns {
     justify-content: flex-start;
-  }
-}
-
-@media (min-width: 1440px) {
-  .banner-title {
-    font-size: 2.5em;
-  }
-
-  .banner-text {
-    margin-bottom: 2em;
   }
 }

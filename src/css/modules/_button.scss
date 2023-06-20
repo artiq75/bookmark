@@ -5,6 +5,8 @@
   cursor: pointer;
   padding: 0.75em 1em;
   border-radius: 5px;
+  box-shadow: rgba(83, 104, 223, 0.2) 0px 8px 10px 1px;
+  transition: .3s;
 }
 
 .btn.full {
@@ -15,6 +17,18 @@
   border-color: var(--soft-blue);
   background-color: var(--soft-blue);
   color: var(--white);
+
+  &:hover {
+    background-color: var(--white);
+    color: var(--very-dark-blue);
+  }
+}
+
+.btn.secondary {
+  &:hover {
+    border-color: var(--soft-blue);
+    background-color: var(--white);
+  }
 }
 
 .btn.outlined {
