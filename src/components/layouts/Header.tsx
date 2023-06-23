@@ -2,23 +2,23 @@ import { useEffect } from 'react'
 
 function Header() {
   useEffect(() => {
-    const headerTop = document.getElementById('header-top')!
-    const headerHamburger = document.getElementById('header-hamburger')!
-    const headerClose = document.getElementById('header-close')!
-    const headerNav = document.getElementById('header-nav')!
+    const headerTop = document.getElementById('header-top')
+    const headerHamburger = document.getElementById('header-hamburger')
+    const headerClose = document.getElementById('header-close')
+    const headerNav = document.getElementById('header-nav')
     const handleHamburger = () => {
-      headerTop.setAttribute('aria-hidden', 'true')
-      headerNav.removeAttribute('aria-hidden')
+      headerTop?.setAttribute('aria-hidden', 'true')
+      headerNav?.removeAttribute('aria-hidden')
     }
     const handleClose = () => {
-      headerTop.removeAttribute('aria-hidden')
-      headerNav.setAttribute('aria-hidden', 'true')
+      headerTop?.removeAttribute('aria-hidden')
+      headerNav?.setAttribute('aria-hidden', 'true')
     }
-    headerHamburger.addEventListener('click', handleHamburger)
-    headerClose.addEventListener('click', handleClose)
+    headerHamburger?.addEventListener('click', handleHamburger)
+    headerClose?.addEventListener('click', handleClose)
     return () => {
-      headerHamburger.removeEventListener('click', handleHamburger)
-      headerClose.removeEventListener('click', handleClose)
+      headerHamburger?.removeEventListener('click', handleHamburger)
+      headerClose?.removeEventListener('click', handleClose)
     }
   }, [])
 
