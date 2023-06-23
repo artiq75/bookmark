@@ -77,5 +77,5 @@ interface TabProps {
 }
 
 export function Tab(props: TabProps) {
-  return <>{props.children}</>
+  return props.children
 }
